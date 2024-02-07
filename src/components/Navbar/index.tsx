@@ -42,7 +42,7 @@ const links: INavbarLink[] = [
     href: GITHUB_PROFILE_URL,
     color: 'primary',
     variant: 'flat',
-    startContent: <RxGithubLogo className="size-6" />,
+    startContent: <RxGithubLogo className="size-6 shrink-0" />,
     isExternal: true,
   },
 ];

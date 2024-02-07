@@ -23,7 +23,7 @@ const employmentRecords: IEmploymentRecord[] = [
     link: 'https://www.milientsoftware.com/',
     location: 'Oslo',
     position: 'Senior React developer',
-    companyOverview: 'Moment is a product-based company headquartered in Oslo, Norway, specializing in advanced project management solutions tailored for the Scandinavian market. With a primary emphasis on serving architects, prestigious firms such as Snohetta and EggsDesign feature in its clientele. The company\'s flagship product is a web-based application offering a comprehensive suite of tools for efficiently managing and forecasting project lifecycles.',
+    companyOverview: 'Moment is a product-based company headquartered in Oslo, Norway, specializing in advanced project management solutions tailored for the Scandinavian market. The company\'s flagship product is a web-based application offering a comprehensive suite of tools for efficiently managing and forecasting project lifecycles.',
     startDate: new Date(2019, 7),
     endDate: new Date(2021, 4),
     description: 'Transformed and modernized codebase from Redux to React-Query, reducing complexity and boosting performance. Developed new features, enhanced overall application speed during high-load periods, and conducted code reviews. Improved onboarding for new team members, stayed updated on tech trends, and integrated React-Query with custom wrappers. Introduced a UI component library for a more standardized and pleasant user experience. Upgraded frontend architecture to support hooks, ensuring code reusability. Occasionally handled minor backend tasks in Java (Spring) and streamlined locale file management to eliminate merge issues.',
