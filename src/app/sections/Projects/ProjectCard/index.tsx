@@ -26,7 +26,7 @@ const ProjectCard = ({ project, className }: IProjectCardProps): ReactElement =>
     </CardHeader>
 
     <CardFooter className="absolute bottom-0 z-10 flex-col items-start bg-black/30">
-      <div className="flex min-h-[4rem] w-full flex-row items-center justify-between">
+      <div className="flex min-h-[4rem] w-full flex-row items-center justify-between gap-1">
         <div className="flex flex-col justify-between gap-1">
           <Typography
             variant="subtitle2"
@@ -45,6 +45,7 @@ const ProjectCard = ({ project, className }: IProjectCardProps): ReactElement =>
 
         <Button
           as={Link}
+          href={project.link}
           variant="light"
           color="secondary"
           radius="full"
