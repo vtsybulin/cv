@@ -1,12 +1,13 @@
 import { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
-
-import './globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactElement } from 'react';
 
 import Providers from '^/components/Providers';
 import Navbar from '^/components/Navbar';
 import IBaseComponentProps from '^/types/IBaseComponentProps';
+
+import './globals.css';
 
 const font = Open_Sans({
   subsets: ['latin'],
@@ -30,6 +31,8 @@ export default function RootLayout({
             {children}
           </div>
         </Providers>
+
+        <SpeedInsights />
       </body>
     </html>
   );

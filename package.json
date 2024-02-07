@@ -13,6 +13,7 @@
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
     "@nextui-org/react": "^2.2.9",
+    "@vercel/speed-insights": "^1.0.9",
     "framer-motion": "^11.0.3",
     "lodash-es": "^4.17.21",
     "next": "14.1.0",
