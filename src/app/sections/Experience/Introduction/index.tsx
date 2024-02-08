@@ -53,7 +53,7 @@ const Introduction = ({ className }: IIntroductionProps): ReactElement => (
       color="secondary"
       variant="flat"
       className="mx-auto w-auto"
-      startContent={<RxDownload className="size-6 shrink-0" />}
+      startContent={<RxDownload className="size-5 shrink-0" />}
     >
       {texts.downloadButtonLabel}
     </Button>

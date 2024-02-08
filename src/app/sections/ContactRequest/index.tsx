@@ -69,7 +69,8 @@ const ContactRequestSection = (): ReactElement => {
           return (
             <InputComponent
               key={name}
-              size="lg"
+              size="md"
+              variant="faded"
               label={globalTexts.field[name]}
               placeholder={texts.form.placeholder[name]}
               isInvalid={!!error}
@@ -87,7 +88,7 @@ const ContactRequestSection = (): ReactElement => {
           color="primary"
           variant="flat"
           size="lg"
-          endContent={<RxPaperPlane className="size-6" />}
+          endContent={<RxPaperPlane className="size-4 shrink-0" />}
         >
           {texts.form.submitButtonLabel}
         </Button>
