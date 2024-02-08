@@ -4,7 +4,7 @@ const employmentRecords: IEmploymentRecord[] = [
   {
     companyName: 'K.W. Bruun & Co',
     link: 'https://www.kwbruun.com/',
-    location: 'Copenhagens',
+    location: 'Copenhagen',
     position: 'Lead React developer',
     companyOverview: 'K.W. Bruun & Co serves as the official car dealer and logistics operator for the renowned \'Stellantis\' corporation, covering operations across Denmark and Sweden',
     startDate: new Date(2021, 4),

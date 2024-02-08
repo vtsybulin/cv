@@ -9,6 +9,7 @@ import PageSection from '^/enums/PageSection';
 import SocialLinks from '^/components/SocialLinks';
 import IBaseComponentProps from '^/types/IBaseComponentProps';
 import getCurrentEmploymentFormatted from '^/utils/getCurrentEmploymentFormatted';
+import { CV_FILE_NAME } from '^/configs/common';
 
 interface IIntroductionProps extends IBaseComponentProps {}
 
@@ -47,7 +48,7 @@ const Introduction = ({ className }: IIntroductionProps): ReactElement => (
 
     <Button
       as={Link}
-      href="/cv.pdf"
+      href={`/${CV_FILE_NAME}`}
       isExternal
       color="secondary"
       variant="flat"
