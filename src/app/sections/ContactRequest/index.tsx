@@ -87,7 +87,7 @@ const ContactRequestSection = (): ReactElement => {
           color="primary"
           variant="flat"
           size="lg"
-          endContent={<RxPaperPlane className="size-4" />}
+          endContent={<RxPaperPlane className="size-6" />}
         >
           {texts.form.submitButtonLabel}
         </Button>

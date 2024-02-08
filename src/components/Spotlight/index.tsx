@@ -6,8 +6,13 @@ import { twMerge } from 'tailwind-merge';
 import classNames from 'classnames';
 
 import useToggle from '^/hooks/useToggle';
+import IBaseComponentProps from '^/types/IBaseComponentProps';
 
-const Spotlight = (): ReactElement | null=> {
+const THROTTLE_TIMEOUT = 100;
+
+interface ISpotlightProps extends IBaseComponentProps {}
+
+const Spotlight = ({ className }: ISpotlightProps): ReactElement | null=> {
   const ref = useRef<HTMLDivElement>(null);
   const [isSpotlightVisible, showSpotlight] = useToggle(false);
 
@@ -18,11 +23,11 @@ const Spotlight = (): ReactElement | null=> {
           return;
         }
 
-        showSpotlight();
-
         ref.current.style.setProperty('--cursor-x', `${Math.round(x)}px`);
         ref.current.style.setProperty('--cursor-y', `${Math.round(y)}px`);
-      }, 100);
+
+        showSpotlight();
+      }, THROTTLE_TIMEOUT);
 
       document.documentElement.addEventListener('pointermove', injectCursorPosition);
 
@@ -34,10 +39,10 @@ const Spotlight = (): ReactElement | null=> {
   return (
     <div
       ref={ref}
-      className="pointer-events-none fixed inset-0 z-0 size-full [--cursor-x:0px] [--cursor-y:0px]"
+      className={twMerge('pointer-events-none fixed inset-0 z-0 size-full [--cursor-x:0px] [--cursor-y:0px]', className)}
     >
       <div
-        className={twMerge('size-[40rem] translate-x-[--spotlight-x] translate-y-[--spotlight-y] rounded-full bg-primary/10 opacity-0 blur-3xl transition-all ease-in [--spotlight-x:calc(var(--cursor-x)_-_50%)] [--spotlight-y:calc(var(--cursor-y)_-_50%)]', classNames({
+        className={twMerge('size-[40rem] translate-x-[--spotlight-x] translate-y-[--spotlight-y] rounded-full bg-secondary/10 opacity-0 blur-3xl transition-all ease-in [--spotlight-x:calc(var(--cursor-x)_-_50%)] [--spotlight-y:calc(var(--cursor-y)_-_50%)]', classNames({
           'opacity-1': isSpotlightVisible,
         }))}
       />

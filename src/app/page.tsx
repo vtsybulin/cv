@@ -8,7 +8,7 @@ import ContactRequestSection from './sections/ContactRequest';
 
 const Root = (): ReactElement => (
   <main className="min-h-screen">
-    <Spotlight />
+    <Spotlight className="max-md:hidden" />
 
     <div className="relative z-10">
       <ExperienceSection />
