@@ -15,7 +15,7 @@ const ExperienceSection = (): ReactElement => (
   <Section
     id={PageSection.Experience}
   >
-    <div className="flex flex-col items-baseline gap-8 lg:flex-row-reverse lg:gap-10">
+    <div className="flex flex-col items-baseline gap-10 lg:flex-row-reverse lg:gap-12">
       <Introduction className="shrink-0 lg:w-[26rem]" />
 
       <div>

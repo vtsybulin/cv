@@ -16,9 +16,9 @@ interface IIntroductionProps extends IBaseComponentProps {}
 const texts = globalTexts.sections[PageSection.Experience].introduction;
 
 const Introduction = ({ className }: IIntroductionProps): ReactElement => (
-  <div className={twMerge('flex flex-col gap-8', className)}>
+  <div className={twMerge('flex flex-col gap-4 md:gap-8', className)}>
     <div
-      className="z-10 flex flex-col gap-4 max-lg:py-6"
+      className="z-10 flex flex-col gap-4 max-lg:py-4"
     >
       <Typography
         as="h1"
@@ -28,7 +28,7 @@ const Introduction = ({ className }: IIntroductionProps): ReactElement => (
         {texts.title}
       </Typography>
 
-      <Code className="mb-4 max-w-fit break-words">
+      <Code className="mb-2 max-w-fit whitespace-normal break-words">
         {getCurrentEmploymentFormatted()}
       </Code>
 
@@ -52,7 +52,7 @@ const Introduction = ({ className }: IIntroductionProps): ReactElement => (
       isExternal
       color="secondary"
       variant="flat"
-      className="mx-auto w-auto"
+      className="mx-auto max-sm:w-full"
       startContent={<RxDownload className="size-5 shrink-0" />}
     >
       {texts.downloadButtonLabel}
