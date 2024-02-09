@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Open_Sans } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import { ReactElement } from 'react';
 
 import Providers from '^/components/Providers';
@@ -31,6 +32,8 @@ export default function RootLayout({
             {children}
           </div>
         </Providers>
+
+        <Analytics />
 
         <SpeedInsights />
       </body>
