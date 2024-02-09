@@ -32,14 +32,18 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            primary: '#6366f1',
+            primary: '#4f46e5',
             secondary: '#f472b6',
+            background: '#f4f4f5',
             foreground: '#3f3f46',
+            content1: {
+              DEFAULT: '#fafafa',
+            },
           },
         },
         dark: {
           colors: {
-            primary: '#6366f1',
+            primary: '#4f46e5',
             secondary: '#f472b6',
             background: '#09090b',
             foreground: '#a1a1aa',

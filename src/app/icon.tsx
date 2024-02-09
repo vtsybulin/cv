@@ -15,18 +15,24 @@ const Icon = (): ImageResponse => new ImageResponse(
   (
     <div
       style={{
-        fontSize: 24,
-        background: '#09090b',
+        background: '#000000',
         width: '100%',
         height: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        color: '#ffffff',
         borderRadius: '100%',
       }}
     >
-      &#128406;
+      <span
+        style={{
+          color: '#ffffff',
+          fontSize: 16,
+          fontWeight: 'bold',
+        }}
+      >
+IT
+      </span>
     </div>
   ),
   {

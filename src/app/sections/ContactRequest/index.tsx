@@ -87,7 +87,6 @@ const ContactRequestSection = (): ReactElement => {
           className="col-span-2"
           color="primary"
           variant="flat"
-          size="lg"
           endContent={<RxPaperPlane className="size-4 shrink-0" />}
         >
           {texts.form.submitButtonLabel}
