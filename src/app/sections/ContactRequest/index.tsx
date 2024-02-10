@@ -70,11 +70,14 @@ const ContactRequestSection = (): ReactElement => {
             <InputComponent
               key={name}
               size="md"
-              variant="faded"
+              variant="flat"
               label={globalTexts.field[name]}
               placeholder={texts.form.placeholder[name]}
               isInvalid={!!error}
               errorMessage={error}
+              classNames={{
+                inputWrapper: 'bg-content1',
+              }}
               {...register(name)}
               {...fieldAdditionalPropsMap[name]}
             />
@@ -87,6 +90,7 @@ const ContactRequestSection = (): ReactElement => {
           className="col-span-2"
           color="primary"
           variant="flat"
+          size="lg"
           endContent={<RxPaperPlane className="size-4 shrink-0" />}
         >
           {texts.form.submitButtonLabel}

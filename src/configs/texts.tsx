@@ -10,7 +10,6 @@ const texts = {
   common: {
     at: 'at',
     present: 'Present',
-    viewInGithub: 'View on GitHub',
   },
   theme: {
     [Theme.Light]: 'Light',
@@ -39,6 +38,10 @@ const texts = {
         [Status.Success]: 'Awesome! Thank you for reaching out. I\'ll review your request and will get back to you shortly.',
       },
     },
+  },
+  navbar: {
+    cvLinkLabel: 'My Resume',
+    githubLinkLabel: 'View on GitHub',
   },
   sections: {
     [PageSection.Experience]: {
@@ -84,7 +87,7 @@ const texts = {
           </>,
           'I hold a Master\'s degree in Computer Science from the National Technical University of Ukraine. Proficient in English, I\'m a fast learner, team player, and always eager to explore new stuff.',
         ],
-        downloadButtonLabel: 'Download CV',
+        downloadButtonLabel: 'Download my resume',
       },
     },
     [PageSection.Projects]: {

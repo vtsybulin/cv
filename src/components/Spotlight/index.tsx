@@ -39,10 +39,10 @@ const Spotlight = ({ className }: ISpotlightProps): ReactElement | null=> {
   return (
     <div
       ref={ref}
-      className={twMerge('pointer-events-none fixed inset-0 z-0 size-full [--cursor-x:0px] [--cursor-y:0px]', className)}
+      className={twMerge('pointer-events-none fixed inset-0 z-0 size-full [--cursor-x:50vw] [--cursor-y:0]', className)}
     >
       <div
-        className={twMerge('size-[40rem] translate-x-[--spotlight-x] translate-y-[--spotlight-y] rounded-full bg-primary/10 opacity-0 blur-3xl transition-all ease-in [--spotlight-x:calc(var(--cursor-x)_-_50%)] [--spotlight-y:calc(var(--cursor-y)_-_50%)]', classNames({
+        className={twMerge('size-[40rem] translate-x-[--spotlight-x] translate-y-[--spotlight-y] rounded-full bg-secondary/10 opacity-0 blur-3xl transition-all ease-in [--spotlight-x:calc(var(--cursor-x)_-_50%)] [--spotlight-y:calc(var(--cursor-y)_-_50%)] dark:bg-primary/10', classNames({
           'opacity-1': isSpotlightVisible,
         }))}
       />

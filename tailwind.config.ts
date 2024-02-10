@@ -33,18 +33,15 @@ const config: Config = {
         light: {
           colors: {
             primary: '#4f46e5',
-            secondary: '#f472b6',
+            secondary: '#f59e0b',
             background: '#f4f4f5',
             foreground: '#3f3f46',
-            content1: {
-              DEFAULT: '#fafafa',
-            },
           },
         },
         dark: {
           colors: {
-            primary: '#4f46e5',
-            secondary: '#f472b6',
+            primary: '#6366f1',
+            secondary: '#f59e0b',
             background: '#09090b',
             foreground: '#a1a1aa',
             content1: {
