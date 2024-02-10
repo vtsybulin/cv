@@ -3,6 +3,7 @@
 import { Resend } from 'resend';
 import { createSafeActionClient } from 'next-safe-action';
 
+import { logger } from '@logger';
 import ContactRequestEmailTemplate from '^/components/emailTemplates/ContactRequestEmailTemplate';
 import { contactRequestFormSchema, ContactRequestFormSchema } from '^/schemas/contactRequestFormSchema';
 import Status from '^/enums/Status';
@@ -26,7 +27,7 @@ const sendContactRequestEmail = action(
     try {
       const { error } = await resend.emails.send({
         from: emailFrom,
-        to: emailFrom,
+        to: emailTo,
         subject: texts.email[EmailTemplate.ContactRequest].subject,
         react: ContactRequestEmailTemplate({
           data,
@@ -34,7 +35,7 @@ const sendContactRequestEmail = action(
       });
 
       if (error) {
-        console.log('error', error);
+        logger.error('Failed sending email', error);
 
         return ({
           status: Status.Failure,
@@ -46,7 +47,9 @@ const sendContactRequestEmail = action(
         status: Status.Success,
         message: texts.email[EmailTemplate.ContactRequest].processingStatus[Status.Success],
       });
-    } catch (err) {
+    } catch (error) {
+      logger.error('Failed sending email', error);
+
       return ({
         status: Status.Failure,
         message: texts.email[EmailTemplate.ContactRequest].processingStatus[Status.Failure],
