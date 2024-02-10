@@ -26,7 +26,7 @@ const sendContactRequestEmail = action(
     try {
       const { error } = await resend.emails.send({
         from: emailFrom,
-        to: emailTo,
+        to: emailFrom,
         subject: texts.email[EmailTemplate.ContactRequest].subject,
         react: ContactRequestEmailTemplate({
           data,
@@ -34,6 +34,8 @@ const sendContactRequestEmail = action(
       });
 
       if (error) {
+        console.log('error', error);
+
         return ({
           status: Status.Failure,
           message: texts.email[EmailTemplate.ContactRequest].processingStatus[Status.Failure],

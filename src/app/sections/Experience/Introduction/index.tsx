@@ -9,7 +9,7 @@ import PageSection from '^/enums/PageSection';
 import SocialLinks from '^/components/SocialLinks';
 import IBaseComponentProps from '^/types/IBaseComponentProps';
 import getCurrentEmploymentFormatted from '^/utils/getCurrentEmploymentFormatted';
-import { CV_FILE_NAME } from '^/configs/common';
+import { makeDownloadCVLink } from '^/utils/routing';
 
 interface IIntroductionProps extends IBaseComponentProps {}
 
@@ -48,10 +48,11 @@ const Introduction = ({ className }: IIntroductionProps): ReactElement => (
 
     <Button
       as={Link}
-      href={`/${CV_FILE_NAME}`}
+      href={makeDownloadCVLink()}
       isExternal
-      color="secondary"
+      color="primary"
       variant="flat"
+      size="lg"
       className="mx-auto max-sm:w-full"
       startContent={<RxDownload className="size-5 shrink-0" />}
     >
