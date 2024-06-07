@@ -9,6 +9,11 @@ import texts from '^/configs/texts';
 import ProjectCard from './ProjectCard';
 
 const projectCardColSpan = ['lg:col-span-7', 'lg:col-span-5', 'lg:col-span-4', 'lg:col-span-4', 'lg:col-span-4'];
+const imgSizesMap: Record<number | 'default', string> = {
+  default: '(max-width: 639px) 100vw, (max-width: 767px) 50vw, 33vw',
+  0: '(max-width: 639px) 100vw, (max-width: 767px) 50vw, 70vw',
+  1: '(max-width: 639px) 100vw, (max-width: 767px) 50vw, 30vw',
+};
 
 const ProjectsSection = (): ReactElement => (
   <Section
@@ -21,6 +26,9 @@ const ProjectsSection = (): ReactElement => (
           key={project.title}
           project={project}
           className={projectCardColSpan[index] || 'lg:col-span-4'}
+          imgProps={{
+            sizes: imgSizesMap[index] || imgSizesMap.default,
+          }}
         />
       ))}
     </div>
